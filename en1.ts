@@ -1,4 +1,4 @@
-namespace stem {
+namespace psw_steam {
     let EN1_init_done: boolean = false;
 
     /**

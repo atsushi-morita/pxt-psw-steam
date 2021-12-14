@@ -1,4 +1,4 @@
-namespace stem {
+namespace psw_steam {
     /**
      * TFW-DS1で距離[cm]を測定します。
      * @param format number format, eg: OutputNumberFormat.INTEGER

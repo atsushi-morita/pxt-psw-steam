@@ -1,4 +1,4 @@
-namespace stem {
+namespace psw_steam {
     /**
      * TFW-TP2の温度[℃]を返します。
      * @param format number format, eg: OutputNumberFormat.INTEGER

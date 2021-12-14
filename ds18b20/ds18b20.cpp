@@ -69,7 +69,8 @@ class microbitp : public MicroBitComponent
     
 
     microbitp  pin0(7, MICROBIT_PIN_P0, PIN_CAPABILITY_ALL);
-   
+    microbitp  pin8(7, MICROBIT_PIN_P8, PIN_CAPABILITY_ALL);
+
     microbitp  pin = pin0;
 
     uint8_t init() {
@@ -151,9 +152,13 @@ class microbitp : public MicroBitComponent
 
 #define RETRY_NUMBER 4
     //%
-    int16_t Temperature() {
+    int16_t Temperature(uint8_t pin_number ) {
         static int retry = RETRY_NUMBER;
-        pin = pin0;
+        if ( pin_number == 0 )
+            pin = pin0;
+        else if ( pin_number == 8 )
+            pin = pin8;
+
         init();
         writeByte(0xCC);
         convert();
