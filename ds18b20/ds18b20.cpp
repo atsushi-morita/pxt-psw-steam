@@ -180,7 +180,7 @@ class microbitp : public MicroBitComponent
                 retry = 0;
                 return -10000;
             }
-            return Temperature();
+            return Temperature(pin_number);
         }
         retry = RETRY_NUMBER;
         return temp * 100 / 16;

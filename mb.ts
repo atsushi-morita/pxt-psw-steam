@@ -223,7 +223,7 @@ namespace psw_steam {
             basic.pause(100)
         }
         _mtx_temperature = true;
-        const temperature = DS18B20.Temperature();
+        const temperature = DS18B20.Temperature(8);
         _mtx_temperature = false;
         if (format === OutputNumberFormat.INTEGER) {
             return Math.round(temperature / 100.0);
